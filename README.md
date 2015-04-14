@@ -6,10 +6,14 @@ Contains examples of ansible use cases.
 
 ```sh
 
-# using interactive ssh 
-ansible-playbook playbooks/example.yml -i inventory -k
+# run role example using interactive ssh authentication
+ansible-playbook role_example.yml -i hosts -k
 
 ```
+
+## References
+
+* [DigitalOcean - roles](https://www.digitalocean.com/community/tutorials/how-to-use-ansible-roles-to-abstract-your-infrastructure-environment)
 
 ## Authors
 

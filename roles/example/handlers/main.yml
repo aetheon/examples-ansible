@@ -1,0 +1,4 @@
+---
+
+- name: notify updated
+  command: touch /tmp/notify.txt

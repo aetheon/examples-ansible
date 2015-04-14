@@ -1,0 +1,6 @@
+---
+
+  - name: run task
+    command: touch /tmp/task.txt
+    notify:
+    - notify updated
