@@ -1,0 +1,6 @@
+---
+- hosts: tests
+  remote_user: oscar.brito
+  tasks:
+  - name: brew update
+    shell: /usr/local/bin/brew update
