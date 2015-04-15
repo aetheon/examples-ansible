@@ -1,6 +1,15 @@
 ---
 
   - name: run task
-    command: touch /tmp/task.txt
+    command: touch {{ tmp_dir }}/task.txt
     notify:
+    # run an handler
     - notify updated
+
+  - name: copy file
+    copy: src=example.txt dest={{ tmp_dir }}/
+    # register a variable after it runs
+    register: copied_file
+
+  - name: copy template (replace existent file)
+    template: src=.bashrc dest={{ tmp_dir }}/.bashrc
